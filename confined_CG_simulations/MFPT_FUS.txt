@@ -1,4 +1,4 @@
-#rate (chains ns-1)	Rg(nm) [Aaron]
+#rate (chains ns-1)	Rg(nm)
 0.008	20
 0.011	18
 0.017	16
