@@ -1,1 +1,16 @@
+gromacs-2019.4
+plumed-2.5.4
+
+1. run the simulation
+gmx grompp -f run.mdp -c rerun1.gro -t rerun1.cpt -p rerun1.top -o rerun2 -pp rerun2 -po rerun2
+
+2.calculate the inter-chain contacts and intra-chain contacts for cluster analysis 
+plumed driver --plumed plumed.dat --mf_xtc ./run2_short_example.xtc --pdb ./reference.pdb
+
+3.output COM trajectory
+plumed driver --plumed plumed_COM.dat --mf_xtc ./run2_short_example.xtc --pdb ./reference.pdb
+
+4.go to "FUS_analysis_example" notebook for cluster analysis 
+
+5.go to "MSM/MSM_sample" notebook for MSM analysis 
 
