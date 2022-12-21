@@ -1,0 +1,48 @@
+integrator               = sd       
+tinit                    = 0
+dt                       = 0.010
+nsteps                   = 30000000 
+nstcomm                  = 100
+; Output control
+nstxout                  = 0
+nstvout                  = 0
+nstfout                  = 0
+nstlog                   = 10000
+nstenergy                = 10000
+nstxout-compressed       = 10000
+xtc_grps                 = System
+
+cutoff-scheme            = group
+nstlist                  = 20
+nstcalclr                = 20
+ns_type                  = grid
+pbc                      = xyz
+
+rlist                    = 4.0
+; Electrostatics
+coulombtype              = user
+coulomb-modifier         = none
+rcoulomb                 = 4.0
+; van der Waals
+vdwtype                  = cut-off
+vdw-modifier             = none
+rvdw                     = 4.0
+
+energygrps		 = System 
+
+tc_grps                  = System
+tau_t                    = 25.  
+ref_t                    = 300
+
+Pcoupl                   = no
+
+gen_vel                  = yes
+gen_temp                 = 300.0
+gen_seed                 = -1
+
+continuation             = no
+
+
+
+
+
