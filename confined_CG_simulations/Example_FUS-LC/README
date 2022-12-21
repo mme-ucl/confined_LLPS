@@ -2,7 +2,8 @@ gromacs-2019.4
 plumed-2.5.4
 
 1. run the simulation
-gmx grompp -f run.mdp -c rerun1.gro -t rerun1.cpt -p rerun1.top -o rerun2 -pp rerun2 -po rerun2
+gmx grompp -f run.mdp -c run1.gro -t run1.cpt -p run1.top -o run2 -pp run2 -po run2
+gmx mdrun -deffnm run2
 
 2.calculate the inter-chain contacts and intra-chain contacts for cluster analysis 
 plumed driver --plumed plumed.dat --mf_xtc ./run2_short_example.xtc --pdb ./reference.pdb
